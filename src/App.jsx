@@ -16,7 +16,7 @@ function App() {
       <Images />
       <Hooks />
       <List />
-      <RenderCond />
+      <RenderCond x={5} y={10} />
     </div>
   )
 }
