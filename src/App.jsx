@@ -5,6 +5,7 @@ import Hooks from './components/Hooks';
 import List from './components/List';
 import RenderCond from './components/RenderCond';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
 import './App.css';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
       <List />
       <RenderCond x={5} y={10} />
       <Fragment />
+      <Container>
+        <h2>Este é filho do container!</h2>
+      </Container>
     </div>
   )
 }
