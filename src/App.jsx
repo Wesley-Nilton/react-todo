@@ -12,7 +12,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todo</h1>
+      <div className="todo-header">
+        <h1>React Todo</h1>
+      </div>
+      <div className="form-todo">
+        <p>Formulário</p>
+      </div>
+      <div className="list-todo">
+        <p>Lista</p>
+      </div>
     </div>
   )
 }
