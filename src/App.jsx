@@ -10,13 +10,20 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="App">
       <div className="todo-header">
         <h1>React Todo</h1>
       </div>
       <div className="form-todo">
-        <p>Formulário</p>
+        <h2>Insira a sua próxima tarefa:</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="submit" value="Enviar" />
+        </form>
       </div>
       <div className="list-todo">
         <h2>Lista de tarefas:</h2>
