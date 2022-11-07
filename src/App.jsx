@@ -12,7 +12,19 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const todo = {
+      id: Math.random(),
+      title,
+      time,
+      done: false,
+    }
+
+    // Sending data to API
+    console.log(todo);
+
     setTitle('');
+    setTime('');
   }
 
   return (
