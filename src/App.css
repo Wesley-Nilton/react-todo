@@ -11,3 +11,46 @@
     padding: .5em;
     border-bottom: 1px solid #2c3035;
 }
+
+.form-todo{
+    margin: 0 2em;
+    padding: 1em;
+    border-bottom: 1px solid #2C3035;
+}
+
+.form-todo h2,
+.list-todo h2{
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label{
+    font-weight: bold;
+    font-size: .7em;
+    margin-bottom: .4em;
+}
+
+.form-control input{
+    color: #dfdfdf;
+    padding: .5em;
+    border-radius: 2px;
+    border: 1px solid #222;
+    background-color: #3c3035;
+}
+
+input[type="submit"]{
+    color: #eee;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #222;
+    background-color: #333;
+}
