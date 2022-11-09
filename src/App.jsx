@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import {BsTrash, BsBookmarkCheck, BsBookmarkCheckFill} from 'react-icons/bs';
 import './App.css';
 
-const API = 'https://my-json-server.typicode.com/Wesley-Nilton/react-todo/db';
+const API = 'https://my-json-server.typicode.com/Wesley-Nilton/react-todo';
 
 function App() {
   const [title, setTitle] = useState('');
@@ -10,7 +10,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const todo = {
@@ -20,8 +20,13 @@ function App() {
       done: false,
     }
 
-    // Sending data to API
-    console.log(todo);
+    await fetch(API + '/todos', {
+      method: 'POST',
+      body: JSON.stringify(todo),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    })
 
     setTitle('');
     setTime('');
