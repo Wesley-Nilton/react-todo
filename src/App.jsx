@@ -10,6 +10,22 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // Load todos before on page load
+  useEffect(() => {
+    const loadData = async() => {
+      setLoading(true);
+
+      const res = await fetch(API + '/todos')
+      .then((res) => res.json())
+      .then((data) => data)
+      .catch((err) => console.log(err))
+
+      setLoading(false);
+      setTodos(res);
+    }
+    loadData();
+  }, [])
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
