@@ -44,8 +44,14 @@ function App() {
       },
     })
 
+    setTodos((prevState) => [...prevState, todo]);
+
     setTitle('');
     setTime('');
+  }
+
+  if(loading){
+    return <p>Carregando...</p>
   }
 
   return (
@@ -70,6 +76,11 @@ function App() {
       <div className="list-todo">
         <h2>Lista de tarefas:</h2>
         {todos.length === 0 && <p>Não há tarefas!</p>}
+        {todos.map((todo) => (
+          <div className="todo" key={todo.id}>
+            {todo.title}
+          </div>
+        ))}
       </div>
     </div>
   )
